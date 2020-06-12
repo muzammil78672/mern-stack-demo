@@ -1,0 +1,29 @@
+{
+  "name": "nextjs",
+  "version": "4.0.0",
+  "private": true,
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "@hapi/joi": "17.1.1",
+    "@material-ui/core": "4.10.2",
+    "@material-ui/icons": "4.9.1",
+    "axios": "0.19.2",
+    "bcrypt": "5.0.0",
+    "clsx": "1.1.1",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "formik": "2.1.4",
+    "mongoose": "5.9.18",
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "yup": "0.29.1"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development node app.js",
+    "deploy": "next build ./src/frontEnd && NODE_ENV=production node app.js",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  }
+}
