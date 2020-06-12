@@ -22,8 +22,8 @@
     "yup": "0.29.1"
   },
   "scripts": {
-    "start": "NODE_ENV=development node app.js",
-    "deploy": "next build ./src/frontEnd && NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=development node app.js",
+    "start": "next build ./src/frontEnd && NODE_ENV=production node app.js",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   }
 }

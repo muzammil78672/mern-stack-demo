@@ -10,7 +10,9 @@ const register = async (data) => {
     });
     return response;
   } catch (error) {
-    alert(error.message);
+    if (error && error.response) {
+      alert(error.response.data.message);
+    }
     console.log(error);
   }
 };
@@ -25,7 +27,9 @@ const login = async (data) => {
     setItem("user", response.data);
     return response;
   } catch (error) {
-    alert(error.message);
+    if (error && error.response) {
+      alert(error.response.data.message);
+    }
     console.log(error);
   }
 };
@@ -35,7 +39,9 @@ const logout = async (data) => {
     clear();
     return true;
   } catch (error) {
-    alert(error.message);
+    if (error && error.response) {
+      alert(error.response.data.message);
+    }
     console.log(error);
   }
 };

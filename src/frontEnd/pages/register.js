@@ -33,9 +33,12 @@ export default () => {
 
   const submitFormHandler = async (data, resetForm) => {
     try {
-      await register(data);
-      resetForm(InitialValues);
-      Router.push("/login");
+      let response = await register(data);
+
+      if (response) {
+        resetForm(InitialValues);
+        Router.push("/login");
+      }
     } catch (error) {
       console.log(error);
     }
