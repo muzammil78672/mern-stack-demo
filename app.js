@@ -12,7 +12,6 @@ const app = next({ dev, dir: "./src/frontEnd" });
 const PORT = process.env.PORT || "3005";
 
 const DB_URL = "mongodb://localhost/demo";
-// const DB_URL = "mongodb://tmdb:Tmdb123@ds351428.mlab.com:51428/tmdb"
 
 const handle = app.getRequestHandler();
 
